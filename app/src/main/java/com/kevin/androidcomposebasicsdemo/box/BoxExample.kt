@@ -13,7 +13,6 @@ import androidx.compose.ui.tooling.preview.Preview
 
 
 
-
 // Compose Box is a layout composable that allows you to stack composable on top of each other.
 // And you can align them in different ways as shown in the example below.
 @Composable
