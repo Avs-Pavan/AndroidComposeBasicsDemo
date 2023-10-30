@@ -22,7 +22,7 @@ class ConstraintLayoutDemo {
                 .fillMaxSize()
                 .background(Color.Cyan)
         ) {
-            val (r1, r2, r3, r4, r5,r6,r7,r8) = createRefs()
+            val (r1, r2, r3, r4, r5, r6, r7, r8) = createRefs()
 
             Box(modifier = Modifier
                 .background(Color.Black)
@@ -75,6 +75,46 @@ class ConstraintLayoutDemo {
                 })
 
 
+        }
+    }
+
+
+    @Preview
+    @Composable
+    fun GuideLines() {
+        ConstraintLayout(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Cyan)
+        ) {
+
+            val (r1, r2, r3) = createRefs()
+
+            val guideLine = createGuidelineFromStart(0.5f)
+            val guideLine2 = createGuidelineFromTop(0.5f)
+
+            val guideLine3 = createGuidelineFromBottom(0.25f)
+            Box(modifier = Modifier
+                .background(Color.Black)
+                .size(50.dp)
+                .constrainAs(r1) {
+                    top.linkTo(parent.top)
+                    start.linkTo(guideLine)
+                })
+            Box(modifier = Modifier
+                .background(Color.Black)
+                .size(50.dp)
+                .constrainAs(r2) {
+                    top.linkTo(guideLine2)
+                    start.linkTo(guideLine)
+                })
+            Box(modifier = Modifier
+                .background(Color.Black)
+                .size(50.dp)
+                .constrainAs(r3) {
+                    top.linkTo(guideLine3)
+                    start.linkTo(parent.start)
+                })
         }
     }
 
