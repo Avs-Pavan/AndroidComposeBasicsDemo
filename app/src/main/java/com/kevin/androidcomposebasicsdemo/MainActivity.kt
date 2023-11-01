@@ -10,6 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.kevin.androidcomposebasicsdemo.bottomnavigation.BottomBarDemo
 import com.kevin.androidcomposebasicsdemo.box.BoxDemo
 import com.kevin.androidcomposebasicsdemo.ui.theme.AndroidComposeBasicsDemoTheme
 
@@ -23,7 +25,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    BoxDemo()
+                    val navHostController = rememberNavController()
+                    BottomBarDemo(nav = navHostController)
                 }
             }
         }
