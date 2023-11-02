@@ -13,6 +13,7 @@ import com.kevin.androidcomposebasicsdemo.animations.FadeAnimationExample
 import com.kevin.androidcomposebasicsdemo.animations.PositionAnimationExample
 import com.kevin.androidcomposebasicsdemo.animations.ScalingAnimationExample
 import com.kevin.androidcomposebasicsdemo.animations.ShimmerCard
+import com.kevin.androidcomposebasicsdemo.dialog.DialogDemo
 
 @Composable
 fun Home() {
@@ -21,7 +22,7 @@ fun Home() {
             .fillMaxSize()
             .background(Color.White)
     ) {
-        Text(text = "Home", modifier = Modifier.align(Alignment.Center))
+        DialogDemo()
     }
 }
 
