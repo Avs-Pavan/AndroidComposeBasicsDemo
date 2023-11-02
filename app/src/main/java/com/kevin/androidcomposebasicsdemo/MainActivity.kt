@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.kevin.androidcomposebasicsdemo.bottomnavigation.BottomBarDemo
 import com.kevin.androidcomposebasicsdemo.box.BoxDemo
+import com.kevin.androidcomposebasicsdemo.navigation_with_data.BottomBarWithDataDemo
 import com.kevin.androidcomposebasicsdemo.ui.theme.AndroidComposeBasicsDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navHostController = rememberNavController()
-                    BottomBarDemo(nav = navHostController)
+                    BottomBarWithDataDemo(nav = navHostController)
                 }
             }
         }
